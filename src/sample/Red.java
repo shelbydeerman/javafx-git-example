@@ -7,8 +7,15 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 
+/**
+ * Creates the red window when "red" is selected from the ComboBox
+ */
 public class Red {
 
+    /**
+     * Defines how to create the red window
+     * Only element is a label
+     */
     public void launchRedWindow() {
         Label lbl = new Label("Red Window");
         HBox root = new HBox();
