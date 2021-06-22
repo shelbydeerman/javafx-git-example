@@ -1,18 +1,16 @@
 package sample;
 
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class Purple {
+
+    Red red = new Red();
 
     public void setup(Stage stage) {
 
@@ -32,5 +30,15 @@ public class Purple {
         stage.setWidth(400);
         stage.setHeight(250);
         stage.show();
+
+        select.setOnAction(event -> {
+            if (colorChoice.getValue() == null) {
+                System.out.println("Please select a value before you submit");
+            } else if (colorChoice.getValue().equals("red")) {
+                red.launchExercise();
+            } //else if (colorChoice.getValue().equals("blue")) {
+                //blue.userWantsToLaunchExercise();
+            //}
+        });
     }
 }
