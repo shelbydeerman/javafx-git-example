@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 public class Purple {
 
     Red red = new Red();
+    Blue blue = new Blue();
 
     public void setup(Stage stage) {
 
@@ -35,10 +36,10 @@ public class Purple {
             if (colorChoice.getValue() == null) {
                 System.out.println("Please select a value before you submit");
             } else if (colorChoice.getValue().equals("red")) {
-                red.launchExercise();
-            } //else if (colorChoice.getValue().equals("blue")) {
-                //blue.userWantsToLaunchExercise();
-            //}
+                red.launchRedWindow();
+            } else if (colorChoice.getValue().equals("blue")) {
+                blue.launchBlueWindow();
+            }
         });
     }
 }
