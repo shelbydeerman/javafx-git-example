@@ -8,22 +8,22 @@ import javafx.stage.Stage;
 import javafx.scene.control.Label;
 
 /**
- * Creates the red window when "red" is selected from the ComboBox
+ * Creates the blue window when "blue" is selected from the ComboBox
  */
-public class Red {
+public class Blue {
 
     /**
-     * Defines how to create the red window
+     * Defines how to create the blue window
      * Only element is a label
      */
-    public void launchRedWindow() {
-        Label lbl = new Label("Red Window");
+    public void launchBlueWindow() {
+        Label lbl = new Label("Blue Window");
         HBox root = new HBox();
         root.getChildren().add(lbl);
         root.setAlignment(Pos.CENTER);
         root.setStyle("-fx-background-color: transparent");
         Scene scene = new Scene(root);
-        scene.setFill(Color.RED);
+        scene.setFill(Color.BLUE);
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.setWidth(400);
